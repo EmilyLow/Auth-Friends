@@ -8,6 +8,17 @@ class FriendsList extends React.Component {
         friends: []
     };
 
+    componentDidMount() {
+        this.getData();
+    
+    }
+
+    getData = () => {
+
+        //Call axiosWithAuth to get actual friends data and then set it to state
+
+    };
+
     render () {
         return (
             <p>FriendsList</p>

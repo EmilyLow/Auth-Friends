@@ -12,6 +12,8 @@ class LoginForm extends React.Component {
     login = (e) => {
         e.preventDefault();
         console.log(this.state.credentials);
+
+        //axios request to get token, then put in local storage
     }
 
     handleChange = (e) => {
