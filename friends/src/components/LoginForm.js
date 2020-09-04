@@ -1,10 +1,19 @@
 import React from 'react';
+import axios from "axios";
 
-function LoginForm() {
-
-    return (
-        <p>LoginForm</p>
-    )
+class LoginForm extends React.Component {
+    state = {
+        credentials: {
+            username: "",
+            password: ""
+        }
+    };
+    render () {
+        return (
+            <p>LoginForm</p>
+        )
+    }
+    
 };
 
 export default LoginForm;

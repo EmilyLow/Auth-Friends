@@ -1,10 +1,19 @@
+
+
 import React from 'react';
 
-function FriendsList () {
 
-    return (
-        <p>Friends List</p>
-    )
-}
+class FriendsList extends React.Component {
+    state = {
+        friends: []
+    };
+
+    render () {
+        return (
+            <p>FriendsList</p>
+        )
+    }
+    
+};
 
 export default FriendsList;
