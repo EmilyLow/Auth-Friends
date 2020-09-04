@@ -19,6 +19,9 @@ class LoginForm extends React.Component {
             .post("http://localhost:5000/api/login", this.state.credentials)
             .then((res) => {
                 console.log("Login res", res);
+                localStorage.setItem("token", res.data.payload);
+                // Below line causes redirect, but I'm not cetain how it works
+                this.props.history.push("/protected");
             })
             .catch((err) => console.log(err));
     }
