@@ -3,7 +3,9 @@
 import React from 'react';
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import Friend from "./Friend";
+import AddFriend from "./AddFriend";
 
+//Need loading still maybe
 
 class FriendsList extends React.Component {
     state = {
@@ -13,6 +15,11 @@ class FriendsList extends React.Component {
     componentDidMount() {
         this.getData();
     
+    }
+
+    //This is not the best way to accomplish list updating without refreshing
+    componentDidUpdate() {
+        this.getData();
     }
 
     getData = () => {
@@ -33,15 +40,17 @@ class FriendsList extends React.Component {
 
     };
 
-    //Need to add loading
+   
     render () {
         return (
-          <div>
-            <p>Friends List</p>
+          <div >
+
+            <h1>Friends List</h1>
             {this.state.friends.map(friend => (
                 <Friend friendData={friend}/>
             ))}
-
+            <h1>Add Friend</h1>
+                <AddFriend/>
           </div>
         )
     }
